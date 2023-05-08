@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.5.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'edu.upc.dtim'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
+    implementation 'org.eclipse.persistence:javax.persistence:2.0.0'
+
+    // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
+    implementation group: 'org.hibernate.orm', name: 'hibernate-core', version: '6.2.2.Final'
+
+    // https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa
+    implementation group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.5.0'
+
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    runtimeOnly group: 'com.h2database', name: 'h2', version: '2.1.214'
+
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
