@@ -11,8 +11,8 @@ import java.util.List;
 @Service
 public class ProjectService {
 
-    public Project savePerson(Project project) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
+    public Project saveProject(Project project) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ORMPersistenceUnit");
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
@@ -32,7 +32,7 @@ public class ProjectService {
     }
 
     public Project getProject(String id) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ORMPersistenceUnit");
         EntityManager em = emf.createEntityManager();
         Project project = null;
         try {
@@ -46,7 +46,7 @@ public class ProjectService {
     }
 
     public List<Project> getAllProjects() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ORMPersistenceUnit");
         EntityManager em = emf.createEntityManager();
         List<Project> projects = null;
         try {
@@ -61,7 +61,7 @@ public class ProjectService {
     }
 
     public boolean deleteProject(String id) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ORMPersistenceUnit");
         EntityManager em = emf.createEntityManager();
         boolean success = false;
         try {
@@ -81,7 +81,7 @@ public class ProjectService {
     }
 
     public boolean deleteAllProjects() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ORMPersistenceUnit");
         EntityManager em = emf.createEntityManager();
         boolean success = false;
         try {

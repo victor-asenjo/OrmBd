@@ -17,7 +17,7 @@ public class ProjectController {
     {
         Project project = new Project();
         project.setName(id);
-        return projectService.savePerson(project);
+        return projectService.saveProject(project);
     }
 
     @GetMapping("/project")
