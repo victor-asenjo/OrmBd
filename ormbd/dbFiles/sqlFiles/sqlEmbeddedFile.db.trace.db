@@ -1,12 +1,7 @@
-2023-05-09 11:19:16 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
-INSERT INTO PERSON (NAME, DTYPE) VALUES (?, ?) [42104-214]
-2023-05-09 11:25:59 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
-INSERT INTO PERSON (NAME, DTYPE) VALUES (?, ?) [42104-214]
-2023-05-09 11:27:01 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
-INSERT INTO PERSON (NAME, DTYPE) VALUES (?, ?) [42104-214]
-2023-05-09 11:28:25 jdbc[3]: exception
+2023-05-09 11:54:02 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
 SELECT NAME FROM PERSON WHERE NAME <> NAME [42104-214]
+2023-05-09 13:05:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PROJECT" no encontrada
+Table "PROJECT" not found; SQL statement:
+SELECT NAME FROM PROJECT WHERE NAME <> NAME [42102-214]

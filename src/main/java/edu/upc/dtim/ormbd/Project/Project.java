@@ -1,6 +1,6 @@
-package edu.upc.dtim.ormbd.Person;
+package edu.upc.dtim.ormbd.Project;
 
-public class Person {
+public class Project {
 
     public String getName() {
         return name;
