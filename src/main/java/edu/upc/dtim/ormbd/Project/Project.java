@@ -15,21 +15,6 @@ public class Project {
     // Unique identifier for the project
     private String projectId;
 
-    // Name of the project
-    private String projectName;
-
-    // Description of the project
-    private String projectDescription;
-
-    // Privacy level of the project (e.g. private, public)
-    private String projectPrivacy;
-
-    // Color associated with the project (not sure what this is used for)
-    private String projectColor;
-
-    // Username of the user who created the project
-    private String createdBy;
-
     public String getProjectName() {
         return projectName;
     }
@@ -45,6 +30,21 @@ public class Project {
     public void setProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
     }
+
+    // Name of the project
+    private String projectName;
+
+    // Description of the project
+    private String projectDescription;
+
+    // Privacy level of the project (e.g. private, public)
+    private String projectPrivacy;
+
+    // Color associated with the project (not sure what this is used for)
+    private String projectColor;
+
+    // Username of the user who created the project
+    private String createdBy;
 
     public String getProjectPrivacy() {
         return projectPrivacy;
@@ -71,9 +71,16 @@ public class Project {
     }
 
 
+    public List<String> getLocalGraphIDs() {
+        return localGraphIDs;
+    }
+
+    public void setLocalGraphIDs(List<String> localGraphIDs) {
+        this.localGraphIDs = localGraphIDs;
+    }
 
     // List of local graph IDs associated with the project (not sure what this is used for)
-    //private List<String> localGraphIDs;
+    private List<String> localGraphIDs;
 
     // constructor, getters, setters, etc.
 }

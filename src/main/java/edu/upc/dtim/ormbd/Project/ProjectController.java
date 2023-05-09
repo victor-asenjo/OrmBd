@@ -13,10 +13,8 @@ public class ProjectController {
     }
 
     @PostMapping("/project")
-    public Project saveProject(@RequestParam String id)
+    public Project saveProject(@RequestBody Project project)
     {
-        Project project = new Project();
-        project.setProjectId(id);
         return projectService.saveProject(project);
     }
 

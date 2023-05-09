@@ -1,19 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
-                 version="1.0">
-    <description>JPA Mapping file for DataNucleus Tutorial with JPA</description>
-    <package>edu.upc.dtim.ormbd.Project</package>
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+                 version="2.1">
 
-    <entity class="Project" name="Project">
-        <inheritance strategy="JOINED"/>
+    <entity class="edu.upc.dtim.ormbd.Project.Project" name="Project">
+        <table name="PROJECTS"/>
         <attributes>
-            <id name="projectId"></id>
-            <basic name="projectDescription"/>
-            <basic name="projectPrivacy"/>
-            <basic name="projectColor"/>
-            <basic name="createdBy"/>
+            <id name="projectId">
+                <generated-value strategy="AUTO"/>
+                <column name="PROJECT_ID"/>
+            </id>
+            <basic name="projectName">
+                <column nullable="false" name="PROJECT_NAME"/>
+            </basic>
+            <basic name="projectDescription">
+                <column name="PROJECT_DESCRIPTION" length="5000"/>
+            </basic>
+            <basic name="projectPrivacy">
+                <column name="PROJECT_PRIVACY"/>
+            </basic>
+            <basic name="projectColor">
+                <column name="PROJECT_COLOR"/>
+            </basic>
+            <basic name="createdBy">
+                <column name="CREATED_BY"/>
+            </basic>
+            <element-collection name="localGraphIDs">
+                <collection-table name="PROJECT_LOCAL_GRAPHS_IDS">
+                    <join-column name="PROJECT_ID"/>
+                </collection-table>
+                <column name="LOCAL_GRAPH_ID"/>
+            </element-collection>
         </attributes>
     </entity>
+
 </entity-mappings>
