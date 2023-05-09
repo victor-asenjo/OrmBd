@@ -9,9 +9,11 @@
     <entity class="Project" name="Project">
         <inheritance strategy="JOINED"/>
         <attributes>
-            <id name="projectId">
-
-            </id>
+            <id name="projectId"></id>
+            <basic name="projectDescription"/>
+            <basic name="projectPrivacy"/>
+            <basic name="projectColor"/>
+            <basic name="createdBy"/>
         </attributes>
     </entity>
 </entity-mappings>

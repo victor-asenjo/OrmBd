@@ -8,7 +8,7 @@
 
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
-        <mapping-file>./Project.orm.xml</mapping-file>
+        <mapping-file>META-INF/Project.orm.xml</mapping-file>
 
         <properties>
             <!-- Database connection properties -->
