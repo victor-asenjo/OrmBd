@@ -25,11 +25,11 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    // https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
-    implementation 'org.eclipse.persistence:javax.persistence:2.0.0'
-
     // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core
     implementation group: 'org.hibernate.orm', name: 'hibernate-core', version: '6.2.2.Final'
+
+    // https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
+    implementation 'org.eclipse.persistence:javax.persistence:2.0.0'
 
     // https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa
     implementation group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.5.0'
