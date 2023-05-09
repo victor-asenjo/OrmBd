@@ -12,7 +12,6 @@ public class PersonService {
 
     public Person savePerson(Person person) {
         Person yo = person;
-        person.setName("Asenjo");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("UnidadPersonas");
         EntityManager em = emf.createEntityManager();
         try {

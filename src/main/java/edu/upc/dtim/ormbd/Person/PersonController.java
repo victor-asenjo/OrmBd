@@ -17,6 +17,7 @@ public class PersonController {
     public Person savePerson(@RequestParam String id)
     {
         Person person = new Person();
+        person.setName(id);
         return personService.savePerson(person);
     }
 
