@@ -16,7 +16,7 @@ public class ProjectController {
     public Project saveProject(@RequestParam String id)
     {
         Project project = new Project();
-        project.setName(id);
+        project.setProjectId(id);
         return projectService.saveProject(project);
     }
 

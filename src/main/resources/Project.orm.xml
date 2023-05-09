@@ -9,7 +9,7 @@
     <entity class="Project" name="Project">
         <inheritance strategy="JOINED"/>
         <attributes>
-            <id name="name">
+            <id name="projectId">
 
             </id>
         </attributes>

@@ -2,15 +2,15 @@ package edu.upc.dtim.ormbd.Project;
 
 public class Project {
 
-    public String getName() {
-        return name;
+    public String getProjectId() {
+        return projectId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProjectId(String name) {
+        this.projectId = name;
     }
 
-    private String name;
+    private String projectId;
 
     // constructor, getters, setters, etc.
 }

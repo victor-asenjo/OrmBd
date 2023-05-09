@@ -14,22 +14,30 @@ public class ProjectService {
     public Project saveProject(Project project) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("ORMPersistenceUnit");
         EntityManager em = emf.createEntityManager();
+        Project savedProject = null;
         try {
             em.getTransaction().begin();
-            em.persist(project); // persist the person object
+            if (project.getProjectId() == null) {
+                // New project, persist it
+                em.persist(project);
+                savedProject = project;
+            } else {
+                // Existing project, merge it
+                savedProject = em.merge(project);
+            }
             em.getTransaction().commit();
-            System.out.println("VALORES INSERTADOS --------------------------------------");
+            System.out.println("Project saved successfully");
 
         } catch (Exception e) {
-            System.out.println("ERRORRRR --------------------------------------");
+            System.out.println("Error saving project: " + e.getMessage());
             e.printStackTrace();
         } finally {
             em.close();
         }
-        System.out.println("FIN MAIN --------------------------------------");
 
-        return project;
+        return savedProject;
     }
+
 
     public Project getProject(String id) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("ORMPersistenceUnit");
