@@ -1,6 +1,12 @@
-2023-05-08 19:28:58 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SEQUENCE" not found (this database is empty); SQL statement:
-UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ? [42104-214]
-2023-05-08 19:32:30 jdbc[3]: exception
+2023-05-09 11:19:16 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
 INSERT INTO PERSON (NAME, DTYPE) VALUES (?, ?) [42104-214]
+2023-05-09 11:25:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
+INSERT INTO PERSON (NAME, DTYPE) VALUES (?, ?) [42104-214]
+2023-05-09 11:27:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
+INSERT INTO PERSON (NAME, DTYPE) VALUES (?, ?) [42104-214]
+2023-05-09 11:28:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSON" not found (this database is empty); SQL statement:
+SELECT NAME FROM PERSON WHERE NAME <> NAME [42104-214]
